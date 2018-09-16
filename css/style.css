@@ -1,0 +1,533 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e5c299;
+    font-family: "the alchemist",
+    "slabo 27px", arial, sans-serif;
+}
+
+.rute {
+    position: relative;
+    margin-bottom: -4px;
+}
+
+.rute img {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-family: "the alchemist",
+    "slabo 27px", arial, sans-serif;
+    text-transform: uppercase;
+    line-height: normal;
+    text-align: center;
+    color: #005b73;
+}
+
+p {
+    font-family: "slabo 27px", arial, sans-serif;
+    color: black;
+}
+
+hr {
+    border: 0.5px solid #a8773c;
+}
+
+.container {
+    font-family: "the alchemist",
+    "slabo 27px", arial, sans-serif;
+    color: #905c1e;
+    z-index: 1;
+    position: absolute;
+}
+
+.container .title {
+    font-size: 3.4em;
+    padding: 0 0 0 200px;
+}
+
+.container .sitat {
+    font-size: 3.4em;
+    padding: 0 0 0 870px;
+}
+
+.container .text1 {
+    font-size: 3em;
+    padding: 280px 0 0 430px;
+}
+
+.container .text2 {
+    font-size: 3em;
+    padding: 210px 0 0 650px;
+}
+
+.container .text3 {
+    font-size: 3em;
+    padding: 360px 0 0 640px;
+}
+
+.container .text4 {
+    font-size: 3em;
+    padding: 255px 0 0 140px;
+}
+
+.container .text5 {
+    font-size: 3em;
+    padding: 170px 0 0 870px;
+}
+
+
+/* Hotspots */
+
+.button {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    margin: 0 auto;
+    background-color: #a8773c;
+    cursor: pointer;
+    animation: glowing 1500ms infinite;
+}
+
+@keyframes glowing {
+    0% {
+        background-color: #a8773c;
+        box-shadow: 0 0 3px #5d3a0a;
+    }
+    50% {
+        background-color: #a8773c;
+        box-shadow: 0 0 40px #5d3a0a;
+    }
+    100% {
+        background-color: #a8773c;
+        box-shadow: 0 0 3px #5d3a0a;
+    }
+
+}
+
+.container:hover .button {
+
+    animation-name: buttons;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+
+    transition: all .2s ease-in-out;
+
+}
+
+@keyframes buttons {
+
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.container .info {
+    background: #eadac8;
+    text-align: left;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 18px;
+    line-height: 1.4em;
+    width: 400px;
+
+    display: none;
+    position: absolute;
+    transform: translate(-50%, -100%);
+    transform: translate(calc(-50% + 10px), calc(-100% - 10px));
+}
+
+.container:hover .info {
+    display: block;
+    border: 2px solid #a88355;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.20);
+    max-width: 400px;
+
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/* rute 1 */
+
+.container1 {
+    position: absolute;
+    top: 42vw;
+    left: 42vw;
+    cursor: pointer;
+}
+
+
+/* Rute 2 */
+
+.container2 {
+    position: absolute;
+    top: 11vw;
+    left: 65vw;
+    cursor: pointer;
+}
+
+
+.container3 {
+    position: absolute;
+    top: 98vw;
+    left: 39vw;
+    cursor: pointer;
+}
+
+/* Rute 3 */
+
+.container4 {
+    position: absolute;
+    top: 11vw;
+    left: 19vw;
+    cursor: pointer;
+}
+
+.container5 {
+    position: absolute;
+    top: 142vw;
+    left: 55vw;
+    cursor: pointer;
+}
+
+/* kiste - kjøp av bok */
+
+.container6 {
+    position: absolute;
+    top: 148vw;
+    left: 70vw;
+    cursor: pointer;
+
+    width: 400px;
+    height: 200px;
+}
+
+.kiste img {
+    width: 100%;
+    height: auto;
+}
+
+.kiste:after {
+    content: "";
+    position: absolute;
+    top: 115px;
+    left: 150px;
+    width: 0;
+    height: 152px;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: none;
+}
+
+.kiste:hover:after {
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 1.2s ease-out;
+}
+
+
+
+/* responsiv design */
+
+@media screen and (min-width:768px) {
+
+    .rute1,
+    .rute2,
+    .rute3 {
+        visibility: visible;
+    }
+
+    .ipad1,
+    .ipad2,
+    .ipad3 {
+        display: none;
+    }
+
+    .mobil1,
+    .mobil2,
+    .mobil3 {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+
+    .ipad1,
+    .ipad2,
+    .ipad3 {
+        visibility: visible;
+    }
+
+    .mobil1,
+    .mobil2,
+    .mobil3 {
+        visibility: visible;
+    }
+
+    .rute1,
+    .rute2,
+    .rute3 {
+        display: none;
+    }
+
+    .button {
+        animation-play-state: paused;
+    }
+    .container:hover .button {
+        animation-play-state: paused;
+
+    }
+
+    .container .title {
+        font-size: 3em;
+        padding: 0 0 0 100px;
+    }
+
+    .container .sitat {
+        font-size: 2.2em;
+        padding: 0 0 0 430px;
+    }
+
+    .container .text1 {
+        font-size: 2.5em;
+        padding: 520px 0 0 120px;
+    }
+
+    .container .text2 {
+        font-size: 2.5em;
+        padding: 330px 0 0 270px;
+    }
+
+    .container .text3 {
+        font-size: 2.5em;
+        padding: 410px 0 0 190px;
+    }
+
+    .container .text4 {
+        font-size: 2.5em;
+        padding: 580px 0 0 90px;
+    }
+
+    .container .text5 {
+        font-size: 2.5em;
+        padding: 140px 0 0 470px;
+    }
+
+    .container1 {
+        top: 104vw;
+        left: 40vw;
+    }
+
+    .container2 {
+        top: 25vw;
+        left: 66vw;
+    }
+
+    .container3 {
+        top: 223vw;
+        left: 37vw;
+    }
+
+    .container4 {
+        top: 41vw;
+        left: 25vw;
+    }
+
+    .container5 {
+        top: 336vw;
+        left: 52vw;
+    }
+
+    .container:hover .info {
+        max-width: 350px;
+        max-height: 400px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .container6 {
+        top: 370vw;
+        left: 57vw;
+
+        width: 300px;
+        height: 200px;
+    }
+
+    .kiste:after {
+        top: 88px;
+        left: 114px;
+        height: 112px;
+    }
+
+    .kiste:hover:after {
+        width: 110px;
+    }
+
+}
+
+
+@media screen and (min-width:425px) {
+
+    .mobil1,
+    .mobil2,
+    .mobil3 {
+        display: none;
+    }
+
+    .ipad1,
+    .ipad2,
+    .ipad3 {
+        visibility: visible;
+    }
+
+    .rute1,
+    .rute2,
+    .rute3 {
+        visibility: visible;
+    }
+}
+
+
+@media screen and (max-width:425px) {
+
+    .mobil1,
+    .mobil2,
+    .mobil3 {
+        visibility: visible;
+    }
+
+    .ipad1,
+    .ipad2,
+    .ipad3 {
+        display: none;
+    }
+
+    .rute1,
+    .rute2,
+    .rute3 {
+        display: none;
+    }
+
+    .container .title {
+        font-size: 3em;
+        padding: 20px 0 0 20px;
+    }
+
+    .container .sitat {
+        display: none;
+    }
+
+    .container .text1 {
+        font-size: 2em;
+        padding: 440px 0 0 40px;
+    }
+
+    .container .text2 {
+        font-size: 2em;
+        padding: 230px 0 0 120px;
+    }
+
+    .container .text3 {
+        font-size: 2em;
+        padding: 350px 0 0 45px;
+    }
+
+    .container .text4 {
+        font-size: 2em;
+        padding: 350px 0 0 180px;
+    }
+
+    .container .text5 {
+        font-size: 1.8em;
+        padding: 50px 0 0 270px;
+    }
+    .container1 {
+        top: 138vw;
+        left: 44vw;
+    }
+
+    .container2 {
+        top: 33vw;
+        left: 74vw;
+    }
+
+    .container2 .info {
+        margin-left: -100px;
+
+    }
+
+    .container3 {
+        top: 307vw;
+        left: 28vw;
+    }
+
+    .container3 .info {
+        margin-left: 50px;
+    }
+
+    .container4 {
+        top: 48vw;
+        left: 27vw;
+    }
+
+    .container4 .info {
+        margin-left: 60px;
+    }
+
+    .container5 {
+        top: 438vw;
+        left: 55vw;
+    }
+
+    .container5 .info {
+        margin-left: -15px;
+    }
+
+    .container:hover .info {
+        max-width: 320px;
+        max-height: 420px;
+    }
+
+    .container6 {
+        top: 490vw;
+        left: 43vw;
+
+        width: 240px;
+        height: 240px;
+    }
+
+    .kiste:after {
+        top: 70px;
+        left: 90px;
+        height: 90px;
+    }
+
+    .kiste:hover:after {
+        width: 75px;
+    }
+
+}
